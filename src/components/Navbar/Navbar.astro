@@ -1,0 +1,76 @@
+<nav class="navbar" data-visible="false">
+  <ul class="menu__list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#">Skills</a></li>
+    <li><a href="#">Projects</a></li>
+  </ul>
+  <div class="mobile-nav-toggle" aria-expanded='false'>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+<style>
+
+  /* .mobile-nav-toggle {
+    display: none;
+  } */
+
+  @media (max-width: 35rem) {
+
+  .mobile-nav-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .mobile-nav-toggle > *{
+    display: inline-block;
+    width: 32px;
+    height: 5px;
+    background-color: black;  
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav-toggle[aria-expanded='true'] > :first-child {
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+
+  .mobile-nav-toggle[aria-expanded='true'] > :nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-nav-toggle[aria-expanded='true'] > :last-child {
+    transform: rotate(45deg) translate(-8px, -6px);
+  }
+}
+</style>
+
+<script type="module">
+const navToggle = document.querySelector('.mobile-nav-toggle')
+const nav = document.querySelector('.navbar')
+const mediaQuery = window.matchMedia('(max-width: 35rem)')
+
+console.log(mediaQuery)
+
+  navToggle.addEventListener('click', () => {
+    const visiblity = nav.getAttribute('data-visible')
+    // if the nav is closed, open it
+    if(visiblity === 'false') {
+      nav.setAttribute('data-visible', true)
+      navToggle.setAttribute('aria-expanded', true)
+    } else {
+      nav.setAttribute('data-visible', false)
+      navToggle.setAttribute('aria-expanded', false)
+    }
+  console.log(visiblity)
+  })
+
+  mediaQuery.addEventListener('change', (e) => {
+    if(!e.matches){
+      nav.setAttribute('data-visible', false)
+      navToggle.setAttribute('aria-expanded', false)
+    }
+  })
+</script>
