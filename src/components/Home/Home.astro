@@ -1,0 +1,63 @@
+---
+import HeroImage from '../../assets/images/hero.png'
+import Button from '../ButtonCV/Button.astro'
+import CV from '../../assets/docs/CV SERGIO PÉREZ.pdf'
+import SectionLayout from '../../layouts/SectionLayout.astro';
+--- 
+
+<SectionLayout>
+	<div class='home-section grid'>
+		<div class='content'>
+			<h1 class='fs-500 letter-spacing-3 uppercase'>
+				Hi There <span class='text-almost-red'>I'am</span>
+				<span class='text-almost-red d-block bolder fs-600'>Sergio Pérez</span>
+			</h1>
+			<p class="fs-300">System Enginer, FullStack Developer and Cats Lover</p>
+		</div>
+		<img src={HeroImage} alt='' />
+		<Button title='Download CV' href={CV} download={true} />
+	</div>
+</SectionLayout>
+
+<style>
+	.home-section {
+		place-content: center;
+		text-align: center;
+		padding-block: max(2rem,5vh);
+		grid-template-areas:
+			'content'
+			'image'
+			'buttons';
+	}
+
+	.home-section > img {
+		grid-area: image;
+		max-height: 480px;
+		border-radius: 2px;
+	}
+
+	.home-section > .content {
+    padding-bottom: 1rem;
+		grid-area: content;
+	}
+
+	.home-section > .button-cv {
+		grid-area: buttons;
+	}
+
+  .content > h1 {
+    margin-bottom: 0.5rem;
+  }
+
+	@media (min-width: 45em) { 
+		.home-section {
+			grid-template-columns: repeat(2, minmax(0,30rem));
+			grid-template-areas:
+        "content image"
+        "buttons image";
+		}
+		.content{
+			align-self: end;
+		}
+	}
+</style>

@@ -10,6 +10,10 @@
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Astro will directly run your TypeScript code, no transpilation needed.
-    "noEmit": true
+    "noEmit": true,
+    "types": ["astro/client", "preact"],
+    "outDir": "./dist",
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
   }
 }

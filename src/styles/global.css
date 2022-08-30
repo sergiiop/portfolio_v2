@@ -1,43 +1,45 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
 :root {
-  /* colors */
-  --clr-dark: 0, 0%, 8%;
-  --clr-gray: 0, 0%, 41%;
-  --clr-white: 0, 0%, 98%;
+	/* colors */
+	--clr-almost-dark: 230, 5%, 21%;
+	--clr-gray: 0, 0%, 41%;
+	--clr-white: 0, 0%, 98%;
+	--clr-secund: 348 89% 61%;
 
-  /* font-sizes */
-  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
-  --fs-800: 3.5rem;
-  --fs-700: 1.5rem;
-  --fs-600: 1rem;
-  --fs-400: 0.9375rem;
-  --fs-300: 1rem;
-  --fs-200: 0.875rem;
+	/* font-sizes */
+	--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+	--fs-800: 3.5rem;
+	--fs-700: 2.5rem;
+	--fs-600: 2rem;
+	--fs-500: 1.5rem;
+	--fs-400: 1rem;
+	--fs-300: 0.9375rem;
+	--fs-200: 0.875rem;
 
-  /* font-families */
-  --ff-sans-normal: 'Epilogue', sans-serif;
+	/* font-families */
+	--ff-sans-normal: 'Lato', sans-serif;
 }
 
 @media (min-width: 35em) {
-  :root {
-    --fs-800: 5rem;
-    --fs-700: 2.5rem;
-    --fs-600: 1.5rem;
-    --fs-500: 1.25rem;
-
-    --fs-400: 1rem;
-  }
+	:root {
+		--fs-800: 5rem;
+		--fs-700: 3rem;
+		--fs-600: 2.5rem;
+		--fs-500: 1.75rem;
+	}
 }
 
 @media (min-width: 45em) {
-  :root {
-    /* font-sizes */
-    --fs-800: 6.25rem;
-    --fs-700: 3.5rem;
-    --fs-600: 2rem;
-    --fs-500: 1.75rem;
-
-    --fs-400: 1.125rem;
-  }
+	:root {
+		/* font-sizes */
+		--fs-800: 6.25rem;
+		--fs-700: 3.5rem;
+		--fs-600: 2.75rem;
+		--fs-500: 2rem;
+		--fs-400: 1.25rem;
+	}
 }
 
 /* ------------------- */
@@ -50,7 +52,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Reset margins */
@@ -64,8 +66,8 @@ p,
 ul,
 figure,
 picture {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 h1,
@@ -75,32 +77,32 @@ h4,
 h5,
 h6,
 p {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* set up the body */
 body {
-  font-family: var(--ff-sans-normal);
-  font-size: var(--fs-400);
-  color: hsl(var(--clr-dark));
-  background-color: hsl(var(--clr-white));
-  line-height: 1.5;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  overflow-x: hidden;
+	font-family: var(--ff-sans-normal);
+	font-size: var(--fs-400);
+	color: hsl(var(--clr-white));
+	background-color: hsl(var(--clr-almost-dark));
+	line-height: 1.5;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: min-content 1fr;
+	overflow-x: hidden;
 }
 
 /* make images easier to work with */
 img,
 picutre {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 /* make form elements easier to work with */
@@ -108,32 +110,32 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 /* Reapply the pointer cursor for anchor tags */
 a,
 button {
-  cursor: revert;
+	cursor: revert;
 }
 
 /* Remove list styles (bullets/numbers) */
 ol,
 ul,
 menu {
-  list-style: none;
+	list-style: none;
 }
 
 /* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 /* ------------------- */
@@ -143,39 +145,38 @@ menu {
 /* general */
 
 .flex {
-  display: flex;
-  gap: var(--gap, 1rem);
+	display: flex;
 }
 
 .grid {
-  display: grid;
-  gap: var(--gap, 1rem);
+	display: grid;
 }
 
 .d-block {
-  display: block;
+	display: block;
 }
 
 .flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-space, 1rem);
+	margin-top: var(--flow-space, 1rem);
 }
 
 .container {
-  padding-inline: 1em;
-  margin-inline: auto;
-  max-width: 80vw;
+	padding-block: 1.5rem;
+	margin-inline: auto;
+	max-width: 1400px;
+	width: 100%;
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* added line */
+	border: 0;
 }
 
 /* 
@@ -197,77 +198,81 @@ menu {
 /* colors */
 
 .bg-dark {
-  background-color: hsl(var(--clr-dark));
+	background-color: hsl(var(--clr-almost-dark));
 }
 .bg-gray {
-  background-color: hsl(var(--clr-gray));
+	background-color: hsl(var(--clr-gray));
 }
 .bg-white {
-  background-color: hsl(var(--clr-white));
+	background-color: hsl(var(--clr-white));
 }
 
 .text-dark {
-  color: hsl(var(--clr-dark));
+	color: hsl(var(--clr-almost-dark));
 }
 .text-gray {
-  color: hsl(var(--clrgray));
+	color: hsl(var(--clr-gray));
 }
 .text-white {
-  color: hsl(var(--clr-white));
+	color: hsl(var(--clr-white));
+}
+
+.text-almost-red {
+	color: hsl(var(--clr-secund));
 }
 
 /* typography */
 
 .ff-sans-normal {
-  font-family: var(--ff-sans-normal);
+	font-family: var(--ff-sans-normal);
 }
 
 .letter-spacing-1 {
-  letter-spacing: 4.75px;
+	letter-spacing: 4.75px;
 }
 .letter-spacing-2 {
-  letter-spacing: 2.7px;
+	letter-spacing: 2.7px;
 }
 .letter-spacing-3 {
-  letter-spacing: 2.35px;
+	letter-spacing: 2.35px;
 }
 
 .uppercase {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .bolder {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .fs-900 {
-  font-size: var(--fs-900);
+	font-size: var(--fs-900);
 }
 .fs-800 {
-  font-size: var(--fs-800);
+	font-size: var(--fs-800);
 }
 .fs-700 {
-  font-size: var(--fs-700);
+	font-size: var(--fs-700);
 }
 .fs-600 {
-  font-size: var(--fs-600);
+	font-size: var(--fs-600);
 }
 .fs-500 {
-  font-size: var(--fs-500);
+	font-size: var(--fs-500);
 }
 .fs-400 {
-  font-size: var(--fs-400);
+	font-size: var(--fs-400);
 }
 .fs-300 {
-  font-size: var(--fs-300);
+	font-size: var(--fs-300);
 }
 .fs-200 {
-  font-size: var(--fs-200);
+	font-size: var(--fs-200);
 }
 
 .fs-900,
 .fs-800,
 .fs-700,
 .fs-600 {
-  line-height: 1.1;
+	line-height: 1.1;
 }

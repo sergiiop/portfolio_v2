@@ -1,0 +1,34 @@
+.button-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.button-container > button {
+	margin-right: 2rem;
+	padding: 0.5rem 1rem;
+	border-radius: 1rem;
+	background: hsl(var(--clr-almost-dark));
+	color: hsl(var(--clr-secund));
+	border: 2px solid hsl(var(--clr-secund));
+	font-weight: bold;
+	width: max-content;
+	cursor: pointer;
+}
+
+@media (max-width: 528px) {
+	.button-container {
+		display: block;
+	}
+
+	.button-container > button {
+		font-size: 1rem;
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.button-container > button.active {
+	background: hsl(var(--clr-secund));
+	color: hsl(var(--clr-almost-dark));
+	border: 2px solid hsl(var(--clr-secund));
+}

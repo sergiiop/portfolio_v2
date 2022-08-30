@@ -1,9 +1,54 @@
 ---
 import Navbar from '../Navbar/Navbar.astro'
+import logo from '../../assets/images/logo.svg'
 ---
-<header>
-  <div>
-    Logo
-  </div>
-  <Navbar />
+
+<header class='flex header'>
+	<div class='container-logo'>
+		<img class='logo' src={logo} />
+	</div>
+	<div class='container-nav flex'>
+		<Navbar />
+	</div>
 </header>
+
+<style>
+	.header {
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem;
+		width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+	}
+	.logo {
+		margin: 0.8rem clamp(1rem, 3vw, 3rem);
+	}
+	.container-logo {
+		width: 15%;
+	}
+
+	.container-nav {
+		width: 85%;
+		justify-content: end;
+	}
+
+	@media (min-width: 35em) {
+		.container-nav {
+			justify-content: start;
+  	}
+		.container-logo {
+		width: 25%;
+	}
+	.container-nav {
+		width: 75%;
+		justify-content: end;
+	}
+	}
+
+	@media (min-width: 45em) { 
+		.container-logo {
+		width: 50%;
+		}
+}
+</style>
