@@ -1,55 +1,48 @@
----
-import Button from '../ButtonCV/Button.astro'
----
-
-<div class='mobile-nav-toggle' aria-expanded='false'>
-	<span></span>
-	<span></span>
-	<span></span>
-</div>
-<nav class='primary-navigation flex' data-visible='false'>
-	<ul class="flex">
+<nav class='primary-navigation' id='primary-navigation'>
+	<ul aria-label='Primary' role='list' class='nav-list'>
 		<li>
-			<a class='text-white letter-spacing-2 uppercase ff-sans-normal bolder' href='#about'
-				>About</a
-			>
+			<a href='#about'>About</a>
 		</li>
 		<li>
-			<a class='text-white letter-spacing-2 uppercase ff-sans-normal bolder' href='#'
-				>Skills</a
-			>
+			<a href='#'>Skills</a>
 		</li>
 		<li>
-			<a class='text-white letter-spacing-2 uppercase ff-sans-normal bolder' href='#'
-				>Projects</a
-			>
+			<a href='#'>Projects</a>
 		</li>
 	</ul>
-	<Button title='contact me' href='mailto:sergio-luis98@hotmail.com' />
 </nav>
 
 <style>
-	.mobile-nav-toggle {
-		display: none;
-	}
-
 	.primary-navigation {
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		gap: clamp(1rem,4vw,3rem);
+		gap: clamp(1rem, 4vw, 3rem);
 	}
 
-	.primary-navigation a {
+	.nav-list {
+		display: flex;
+		font-size: var(--fs-nav);
+		gap: clamp(var(--size-400), 5vw, var(--size-600));
+	}
+
+	.nav-list a {
 		text-decoration: none;
+		color: var(--clr-primary-400);
+		font-weight: var(--fw-semi-bold);
 	}
 
-	.primary-navigation a > span {
-		font-weight: 700;
-		margin-right: 0.5em;
+	.nav-list a:hover,
+	.nav-list a:focus {
+		color: var(--clr-accent-400);
 	}
-
-	@media (max-width: 35em) {
+	@media (max-width: 40em) {
+		.nav-list {
+			display: grid;
+			gap: var(--size-600);
+			text-align: center;
+			font-weight: var(--fw-bold);
+		}
 		.primary-navigation {
 			position: fixed;
 			z-index: 1000;
@@ -63,81 +56,40 @@ import Button from '../ButtonCV/Button.astro'
 			border-left: 1px solid hsl(var(--clr-secund));
 			background: hsl(var(--clr-almost-dark));
 		}
-
-		.primary-navigation > ul {
-			flex-direction: column;
-			gap: clamp(1rem,4vw,3rem);
-		}
-		.mobile-nav-toggle {
-			z-index: 2000;
-			cursor: pointer;
-			display: inline-flex;
-			flex-direction: column;
-			gap: 5px;
-			position: absolute;
-			top: 1.5rem;
-			padding-right: 1rem;
-		}
-
-		.mobile-nav-toggle > * {
-			display: inline-block;
-			width: 32px;
-			height: 5px;
-			background-color: hsl(var(--clr-secund));
-			transition: all 0.3s ease;
-		}
-
-		.primary-navigation[data-visible='true'] {
+		.primary-navigation[data-visible] {
 			transform: translateX(0);
 		}
-
-		.mobile-nav-toggle[aria-expanded='true'] > :first-child {
-			transform: rotate(-45deg) translate(-8px, 6px);
-		}
-
-		.mobile-nav-toggle[aria-expanded='true'] > :nth-child(2) {
-			opacity: 0;
-		}
-
-		.mobile-nav-toggle[aria-expanded='true'] > :last-child {
-			transform: rotate(45deg) translate(-8px, -6px);
-		}
 	}
 
-	@media (min-width: 35em) {
-  .primary-navigation {
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-  }
+	@media (min-width: 40em) {
+		.primary-navigation {
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
 
-	.primary-navigation > ul {
-		gap: 0.8rem;
+		.primary-navigation > ul {
+			gap: 0.8rem;
+		}
 	}
-}
 </style>
 
 <script type='module'>
 	const navToggle = document.querySelector('.mobile-nav-toggle')
 	const nav = document.querySelector('.primary-navigation')
-	const mediaQuery = window.matchMedia('(max-width: 35rem)')
+	const mediaQuery = window.matchMedia('(max-width: 40rem)')
 
 	navToggle.addEventListener('click', () => {
-		const visiblity = nav.getAttribute('data-visible')
-		// if the nav is closed, open it
-		if (visiblity === 'false') {
-			nav.setAttribute('data-visible', true)
-			navToggle.setAttribute('aria-expanded', true)
-		} else {
-			nav.setAttribute('data-visible', false)
-			navToggle.setAttribute('aria-expanded', false)
-		}
-		console.log(visiblity)
+		nav.hasAttribute('data-visible')
+			? navToggle.setAttribute('aria-expanded', false)
+			: navToggle.setAttribute('aria-expanded', true)
+			nav.toggleAttribute('data-visible')
 	})
 
 	mediaQuery.addEventListener('change', (e) => {
 		if (!e.matches) {
-			nav.setAttribute('data-visible', false)
+			console.log('not matches')
+			nav.removeAttribute('data-visible')
 			navToggle.setAttribute('aria-expanded', false)
 		}
 	})

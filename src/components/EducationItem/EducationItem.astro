@@ -1,73 +1,74 @@
 ---
-const {education} = Astro.props
+const { education } = Astro.props
 ---
 
-<section class="education-item--container">
-  <div year={education.year} class="education-title--container">
-    <h2>{education.title}</h2>
-  </div>
-  <div class="education-content--container">
-    <h4 class="fs-300">
-      {education.subtitle}
-    </h4>
-    <p>{education.description}</p>
-  </div>
+<section class='education-item--container'>
+	<div year={education.year} class='education-title--container'>
+		<h2>{education.title}</h2>
+	</div>
+	<div class='education-content--container'>
+		<h4 class='fs-300'>
+			{education.subtitle}
+		</h4>
+		<p>{education.description}</p>
+	</div>
 </section>
 
 <style>
-  .education-item--container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .education-title--container {
-    padding-left: 6rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
+	.education-item--container {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.education-title--container {
+		padding-left: 6rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
 
-  .education-title--container::before {
-    content: '';
-    position: absolute;
-    width: 1.4rem;
-    height: 1.4rem;
-    border-radius: 50%;
-    left: 3.5rem;
-    box-shadow: 0px 0px 20px 6px hsl(var(--clr-secund));
-  }
+	.education-title--container::before {
+		content: '';
+		position: absolute;
+		width: 1.4rem;
+		height: 1.4rem;
+		border-radius: 50%;
+		left: 3.5rem;
+		box-shadow: 0px 0px 20px 6px hsl(var(--clr-secund));
+	}
 
-  .education-title--container::after {
-    content: attr(year);
-    position: absolute;
-    background-color: #000;
-    color: #fff;
-    width: 48px;
-    left: -2px;
-    height: 24px;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    display: flex;
-    align-items: center;
-    padding-left: 4px;
-    font-size: 0.85rem;
-  }
+	.education-title--container::after {
+		content: attr(year);
+		position: absolute;
+		color: hsl(var(--clr-almost-dark));
+		font-weight: bolder;
+		background: hsl(var(--clr-secund));
+		width: 48px;
+		left: -2px;
+		height: 24px;
+		clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+		display: flex;
+		align-items: center;
+		padding-left: 4px;
+		font-size: 0.85rem;
+	}
 
-  .education-content--container > h4 {
-    margin-bottom: 4px;
-    color: hsl(var(--clr-secund))
-  }
+	.education-content--container > h4 {
+		margin-bottom: 4px;
+		color: hsl(var(--clr-secund));
+	}
 
-  .education-content--container{
-    border-left: 2px solid hsl(var(--clr-secund));
-    margin: 0px 0px 20px 4.2rem;
-    padding-left: 2.5rem;
-  }
+	.education-content--container {
+		border-left: 2px solid hsl(var(--clr-secund));
+		margin: 0px 0px 20px 4.2rem;
+		padding-left: 2.5rem;
+	}
 
-  @media (max-width: 430px) { 
-    .education-title--container::after {
-      width: 36px;
-      height: 18px;
-      font-size: 0.85rem;
-    }
-  }
+	@media (max-width: 430px) {
+		.education-title--container::after {
+			width: 36px;
+			height: 18px;
+			font-size: 0.85rem;
+		}
+	}
 </style>

@@ -1,47 +1,51 @@
 ---
 import Photo from '../../assets/images/myphoto.jpg'
-import SectionLayout from '../../layouts/SectionLayout.astro';
-import Title from '../Title/Title.astro';
+import SectionLayout from '../../layouts/SectionLayout.astro'
+import Title from '../Title/Title.astro'
 ---
 
 <SectionLayout isDark={true}>
-    <Title title="About me" />
-    <div class="about-container--content flex">
-      <div class="paragraph-container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aliquid officiis vitae voluptate vel reiciendis culpa exercitationem praesentium. Molestias ullam inventore dignissimos vero nemo accusamus rerum eligendi excepturi. Aut, fuga.</p>
-      </div>
-      <img src={Photo} alt="My image">
-    </div>
+	<Title title='About me' />
+	<div class='about-container--content flex'>
+		<div class='paragraph-container'>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aliquid officiis vitae
+				voluptate vel reiciendis culpa exercitationem praesentium. Molestias ullam inventore
+				dignissimos vero nemo accusamus rerum eligendi excepturi. Aut, fuga.
+			</p>
+		</div>
+		<img src={Photo} alt='My image' />
+	</div>
 </SectionLayout>
 <style>
-  .about-container--content {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 1.5rem;
-  }
+	.about-container--content {
+		flex-direction: column-reverse;
+		align-items: center;
+		gap: 1.5rem;
+	}
 
-  .paragraph-container{ 
-    width: 80%;
-    text-align: center;
-  }
+	.paragraph-container {
+		width: 80%;
+		text-align: center;
+	}
 
-  .about-container--content > img {
-    max-width: 400px;
-    max-height: 400px;
-    border-radius: 1rem;
-    object-fit: contain;
-    overflow: hidden;
-  }
+	.about-container--content > img {
+		max-width: 400px;
+		max-height: 400px;
+		border-radius: 1rem;
+		object-fit: contain;
+		overflow: hidden;
+	}
 
-  @media (min-width: 45em) { 
-    .about-container--content {
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
+	@media (min-width: 45em) {
+		.about-container--content {
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
 
-		.paragraph-container{ 
-    width: 60%;
-    text-align: start;
-    }
-  }
+		.paragraph-container {
+			width: 60%;
+			text-align: start;
+		}
+	}
 </style>

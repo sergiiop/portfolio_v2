@@ -163,21 +163,21 @@ export const EducationQualityData = [
 		title: 'Information Systems Engineer',
 		subtitle: 'Universidad del Sinú',
 		description:
-      'I completed my studies in Information Systems Engineer at the Universidad del Sinú in Montería, Colombia. I was part of the team that developed the a multi-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit.',
+			'I completed my studies in Information Systems Engineer at the Universidad del Sinú in Montería, Colombia. I was part of the team that developed the a multi-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit.',
 		year: '2022'
 	},
 	{
 		title: 'Mísion TIC 2022',
 		subtitle: 'Universidad Pontificia Bolivariana',
 		description:
-      'I participated in the programa Mision TIC 2022 that was created by the ministry of technology of the Colombia. This program was created to train 100000 young people in 3 years. The enphasis was learning programming and aplications web with a intensity of 800 hours',
+			'I participated in the programa Mision TIC 2022 that was created by the ministry of technology of the Colombia. This program was created to train 100000 young people in 3 years. The enphasis was learning programming and aplications web with a intensity of 800 hours',
 		year: '2021'
 	},
 	{
 		title: 'JavaScript School',
 		subtitle: 'Platzi',
 		description:
-      'I learned JavaScript from Platzi. I learned how to use the JavaScript language and how to use the JavaScript framework ReactJS, finally I finished the career of javascript developer in agoust 2020.',
+			'I learned JavaScript from Platzi. I learned how to use the JavaScript language and how to use the JavaScript framework ReactJS, finally I finished the career of javascript developer in agoust 2020.',
 		year: '2020'
 	}
 ]

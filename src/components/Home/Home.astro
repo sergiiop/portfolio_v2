@@ -2,8 +2,8 @@
 import HeroImage from '../../assets/images/hero.png'
 import Button from '../ButtonCV/Button.astro'
 import CV from '../../assets/docs/CV SERGIO PÉREZ.pdf'
-import SectionLayout from '../../layouts/SectionLayout.astro';
---- 
+import SectionLayout from '../../layouts/SectionLayout.astro'
+---
 
 <SectionLayout>
 	<div class='home-section grid'>
@@ -12,10 +12,10 @@ import SectionLayout from '../../layouts/SectionLayout.astro';
 				Hi There <span class='text-almost-red'>I'am</span>
 				<span class='text-almost-red d-block bolder fs-600'>Sergio Pérez</span>
 			</h1>
-			<p class="fs-300">System Enginer, FullStack Developer and Cats Lover</p>
+			<p class='fs-300'>System Enginer, FullStack Developer and Cats Lover</p>
 		</div>
 		<img src={HeroImage} alt='' />
-		<Button title='Download CV' href={CV} download={true} />
+		<Button title='Download CV' href={CV} download='CV_SERGIO_PEREZ' />
 	</div>
 </SectionLayout>
 
@@ -23,7 +23,7 @@ import SectionLayout from '../../layouts/SectionLayout.astro';
 	.home-section {
 		place-content: center;
 		text-align: center;
-		padding-block: max(2rem,5vh);
+		padding-block: max(2rem, 5vh);
 		grid-template-areas:
 			'content'
 			'image'
@@ -37,7 +37,7 @@ import SectionLayout from '../../layouts/SectionLayout.astro';
 	}
 
 	.home-section > .content {
-    padding-bottom: 1rem;
+		padding-bottom: 1rem;
 		grid-area: content;
 	}
 
@@ -45,18 +45,18 @@ import SectionLayout from '../../layouts/SectionLayout.astro';
 		grid-area: buttons;
 	}
 
-  .content > h1 {
-    margin-bottom: 0.5rem;
-  }
+	.content > h1 {
+		margin-bottom: 0.5rem;
+	}
 
-	@media (min-width: 45em) { 
+	@media (min-width: 45em) {
 		.home-section {
-			grid-template-columns: repeat(2, minmax(0,30rem));
+			grid-template-columns: repeat(2, minmax(0, 30rem));
 			grid-template-areas:
-        "content image"
-        "buttons image";
+				'content image'
+				'buttons image';
 		}
-		.content{
+		.content {
 			align-self: end;
 		}
 	}

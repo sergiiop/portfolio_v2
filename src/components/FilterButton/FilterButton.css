@@ -1,17 +1,16 @@
 .button-container {
 	display: flex;
-	justify-content: flex-end;
+	gap: 1rem;
 }
 
 .button-container > button {
-	margin-right: 2rem;
 	padding: 0.5rem 1rem;
 	border-radius: 1rem;
 	background: hsl(var(--clr-almost-dark));
 	color: hsl(var(--clr-secund));
 	border: 2px solid hsl(var(--clr-secund));
 	font-weight: bold;
-	width: max-content;
+	min-width: max-content;
 	cursor: pointer;
 }
 

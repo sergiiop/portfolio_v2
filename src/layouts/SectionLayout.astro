@@ -1,17 +1,17 @@
 ---
-const { isDark} = Astro.props
+const { isDark } = Astro.props
 
-const backgroundColor = isDark ? '#171C23': 'transparent'
+const backgroundColor = isDark ? '#171C23' : 'transparent'
 ---
 
 <section>
-  <div class="container">
-    <slot />
-  </div>
+	<div class='container'>
+		<slot />
+	</div>
 </section>
 
 <style define:vars={{ backgroundColor }}>
-  section {
-    background-color: var(--backgroundColor);
-  }
+	section {
+		background-color: var(--backgroundColor);
+	}
 </style>

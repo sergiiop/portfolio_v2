@@ -1,5 +1,3 @@
 import { useEffect } from 'preact/hooks'
 
-export const useActiveBottom = (activeItem) => {
-
-}
+export const useActiveBottom = (activeItem) => {}

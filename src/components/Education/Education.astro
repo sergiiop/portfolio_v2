@@ -1,22 +1,17 @@
 ---
-import {EducationQualityData} from '../../mocks/data'
-import EducationItem from '../EducationItem/EducationItem.astro';
+import { EducationQualityData } from '../../mocks/data'
+import EducationItem from '../EducationItem/EducationItem.astro'
 ---
 
-<div class="education-items--container">
-  {EducationQualityData.map((item, index) => (
-    <EducationItem
-      key={index}
-      education={item}
-    ></EducationItem>
-  ))}
+<div class='education-items--container'>
+	{EducationQualityData.map((item, index) => <EducationItem key={index} education={item} />)}
 </div>
 
 <style>
-  .education-items--container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 80%;
-  }
+	.education-items--container {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		width: 80%;
+	}
 </style>
