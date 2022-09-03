@@ -7,12 +7,12 @@ import Title from '../Title/Title.astro'
 
 <SectionLayout>
 	<Title title='My resume' />
-	<div class='flex resume-container'>
-		<div class='resume-container--education'>
+	<div class='even-columns'>
+		<div>
 			<h2>EDUACTION QUALITY</h2>
 			<Education />
 		</div>
-		<div class='resume-container--skills'>
+		<div>
 			<h2>MY SKILLS</h2>
 			<Skills client:visible />
 		</div>
@@ -20,12 +20,4 @@ import Title from '../Title/Title.astro'
 </SectionLayout>
 
 <style>
-	.resume-container {
-	}
-	.resume-container--education {
-		width: 50%;
-	}
-	.resume-container--skills {
-		width: 50%;
-	}
 </style>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'preact/hooks'
+import React, { useState, useEffect } from 'react'
 import { FilterButton } from '../FilterButton/FilterButton'
 
 import { mySkillsData } from '../../mocks/data'

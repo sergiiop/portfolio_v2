@@ -1,7 +1,15 @@
-import { useEffect } from 'preact/hooks'
+import { useEffect } from 'react'
 import './FilterButton.css'
 
-const FilterButton = ({ items, setFiltered, activeItem, setActiveItem, buttonProperties }) => {
+const FilterButton = ({
+	items,
+	setFiltered,
+	activeItem,
+	setActiveItem,
+	buttonProperties,
+	handlePosition,
+	handleCount
+}) => {
 	useEffect(() => {
 		if (activeItem === 'all') {
 			setFiltered(items)
@@ -10,22 +18,22 @@ const FilterButton = ({ items, setFiltered, activeItem, setActiveItem, buttonPro
 		const filtered = items.filter((item) => {
 			return item.genre === activeItem
 		})
-		console.log(filtered)
 		setFiltered(filtered)
 	}, [activeItem])
 
-	useEffect(() => {
-		console.log('hellow')
-	}, [])
+	const handleClick = (button) => {
+		setActiveItem(button.genre)
+		handlePosition(0)
+		handleCount(0)
+	}
+
 	return (
 		<div className='button-container'>
 			{buttonProperties.map((button) => {
 				return (
 					<button
 						key={button.name}
-						onClick={() => {
-							setActiveItem(button.genre)
-						}}
+						onClick={() => handleClick(button)}
 						className={button.genre === activeItem ? 'active' : ''}
 					>
 						{button.name}

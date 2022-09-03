@@ -1,21 +1,20 @@
 ---
 import HeroImage from '../../assets/images/hero.png'
-import Button from '../ButtonCV/Button.astro'
+import Button from '../Button/Button.astro'
 import CV from '../../assets/docs/CV SERGIO PÉREZ.pdf'
 import SectionLayout from '../../layouts/SectionLayout.astro'
 ---
-
 <SectionLayout>
-	<div class='home-section grid'>
-		<div class='content'>
-			<h1 class='fs-500 letter-spacing-3 uppercase'>
+	<div class='even-columns'>
+		<div>
+			<h1 class='fs-700 uppercase'>
 				Hi There <span class='text-almost-red'>I'am</span>
-				<span class='text-almost-red d-block bolder fs-600'>Sergio Pérez</span>
+				<span class='text-almost-red d-block bolder fs-900'>Sergio Pérez</span>
 			</h1>
-			<p class='fs-300'>System Enginer, FullStack Developer and Cats Lover</p>
+			<p class='fs-500'>System Enginer, FullStack Developer and Cats Lover</p>
+			<Button title='Download CV' href={CV} download='CV_SERGIO_PEREZ' />
 		</div>
 		<img src={HeroImage} alt='' />
-		<Button title='Download CV' href={CV} download='CV_SERGIO_PEREZ' />
 	</div>
 </SectionLayout>
 

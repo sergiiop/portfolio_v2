@@ -11,6 +11,8 @@ import React from './react-2.svg'
 import Redux from './redux.svg'
 import Mongo from './mongodb.svg'
 import Vite from './Vite.svg'
+import LeftArrow from './left-arrow.svg'
+import RigthArrow from './right-arrow.svg'
 
 const useIcons = () => {
 	return {
@@ -26,7 +28,9 @@ const useIcons = () => {
 		React,
 		Redux,
 		Mongo,
-		Vite
+		Vite,
+		LeftArrow,
+		RigthArrow
 	}
 }
 

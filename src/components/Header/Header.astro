@@ -1,22 +1,23 @@
 ---
 import Navbar from '../Navbar/Navbar.astro'
-import Button from '../ButtonCV/Button.astro'
+import Button from '../Button/Button.astro'
 import ButtonNav from './ButtonNav.astro'
+import Logo from '../../assets/images/logo.svg'
 ---
 
 <header class='primary-header'>
 	<div class='container'>
 		<div class='nav-wrapper'>
 			<a href="#">
-				<svg class="logo" width="146" height="24">
-					<use xlink:href="../../assets/images/logo.svg#logo"></use>
+				<svg class="icon" width="45" height="45">
+					<use xlink:href={`${Logo}#logo`}></use>
 				</svg>
 			</a>
 			<ButtonNav />
 			<div class='container-nav flex'>
 				<Navbar />
 			</div>
-			<Button classNames="display-sm-one display-md-inline-flex" title='Contact me' href='mailto:sergio-luis98@hotmail.com' download='SERGIO_PEREZ_CV' />
+			<Button classNames="display-sm-one display-md-inline-flex" title='Contáctame' href='mailto:sergio-luis98@hotmail.com' download='SERGIO_PEREZ_CV' />
 		</div>
 	</div>
 </header>

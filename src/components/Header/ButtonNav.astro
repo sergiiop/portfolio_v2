@@ -1,0 +1,44 @@
+<div class='mobile-nav-toggle' aria-expanded='false'>
+	<span></span>
+	<span></span>
+	<span></span>
+  <span class="visually-hidden">Menu</span>
+</div>
+
+<style>
+	.mobile-nav-toggle {
+		display: none;
+	}
+
+	@media (max-width: 40em) {
+		.mobile-nav-toggle {
+			z-index: 2000;
+			cursor: pointer;
+			display: inline-flex;
+			flex-direction: column;
+			gap: 5px;
+			position: absolute;
+			right: var(--fs-700);
+		}
+
+		.mobile-nav-toggle > * {
+			display: inline-block;
+			width: 32px;
+			height: 5px;
+			background-color: hsl(var(--clr-secund));
+			transition: all 0.3s ease;
+		}
+
+		.mobile-nav-toggle[aria-expanded='true'] > :nth-child(1) {
+			transform: rotate(-45deg) translate(-8px, 6px);
+		}
+
+		.mobile-nav-toggle[aria-expanded='true'] > :nth-child(2) {
+			opacity: 0;
+		}
+
+		.mobile-nav-toggle[aria-expanded='true'] > :nth-child(3) {
+			transform: rotate(45deg) translate(-8px, -6px);
+		}
+	}
+</style>

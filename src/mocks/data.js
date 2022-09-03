@@ -1,6 +1,6 @@
 import { useAssets } from '../assets'
 
-const { useIcons } = useAssets()
+const { useIcons, useImages } = useAssets()
 
 const {
 	Docker,
@@ -18,7 +18,7 @@ const {
 	Vite
 } = useIcons()
 
-// const { TodoApp, Portfolio, ACI, KalaBasic, Prematix, Weather } = useImages()
+const { TodoApp, Portfolio, ACI, KalaBasic, Prematix, Weather } = useImages()
 
 export const mySkillsData = [
 	{
@@ -89,74 +89,74 @@ export const mySkillsData = [
 	}
 ]
 
-// export const ProjectsData = [
-// 	{
-// 		title: 'Prematix',
-// 		description:
-//       "Prematix was my thesis project, it's a multy-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit, the fathers can see the progress of their babies in the hospital, also it has a video chat feature that allows the doctors to communicate with the parents.",
-// 		image: Prematix,
-// 		technologies: [
-// 			mySkillsData[0].name,
-// 			mySkillsData[3].name,
-// 			'React Native',
-// 			'Firebase',
-// 			'WebRTC',
-// 			mySkillsData[10].name
-// 		],
-// 		live: null,
-// 		github: 'https://github.com/ramiroguzmanc/Prematix-web',
-// 		genre: 'professional'
-// 	},
-// 	{
-// 		title: 'Todo List',
-// 		description:
-//       'A todo list application that allows users to create, edit, and delete tasks, this application was built using React. I created this project to learn React.',
-// 		image: TodoApp,
-// 		technologies: [mySkillsData[0].name, mySkillsData[3].name, mySkillsData[12].name],
-// 		github: 'https://github.com/sergiiop/To-Do-List',
-// 		live: 'https://sergiiop.github.io/To-Do-List/',
-// 		genre: 'personal'
-// 	},
-// 	{
-// 		title: 'Portfolio',
-// 		description: 'This is my portfolio website. It was built using React.',
-// 		image: Portfolio,
-// 		technologies: [mySkillsData[0].name, mySkillsData[3].name, mySkillsData[12].name],
-// 		github: 'https://github.com/sergiiop/my_portfolio',
-// 		live: 'sergiioperez.com',
-// 		genre: 'personal'
-// 	},
-// 	{
-// 		title: 'ACI ITALIANA',
-// 		description:
-//       'This is a landing page for a company named ACI ITALIANA that provides advisory services for obtaining Italian citizenship. This project was built using HTML y CSS.',
-// 		image: ACI,
-// 		technologies: [mySkillsData[2].name],
-// 		github: 'https://github.com/juanfug/Aci',
-// 		live: 'https://acitaliana.com.co/',
-// 		genre: 'professional'
-// 	},
-// 	{
-// 		title: 'Weather App',
-// 		description:
-//       'this is an app i made to practice reactjs and api consumptions with axios',
-// 		image: Weather,
-// 		technologies: [mySkillsData[3].name, mySkillsData[12].name],
-// 		github: 'https://github.com/sergiiop/WeatherApp',
-// 		live: 'https://sergiiop.github.io/WeatherApp/',
-// 		genre: 'personal'
-// 	},
-// 	{
-// 		title: 'KALA BASIC',
-// 		description:
-//       'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
-// 		image: KalaBasic,
-// 		technologies: ['WordPress'],
-// 		github: null,
-// 		live: 'https://kalabasic.com/',
-// 		genre: 'professional'
-// 	}
-// ]
+export const ProjectsData = [
+	{
+		title: 'Prematix',
+		description:
+      "Prematix was my thesis project, it's a multy-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit, the fathers can see the progress of their babies in the hospital, also it has a video chat feature that allows the doctors to communicate with the parents.",
+		image: Prematix,
+		technologies: [
+			mySkillsData[0].name,
+			mySkillsData[3].name,
+			'React Native',
+			'Firebase',
+			'WebRTC',
+			mySkillsData[10].name
+		],
+		live: null,
+		github: 'https://github.com/ramiroguzmanc/Prematix-web',
+		genre: 'professional'
+	},
+	{
+		title: 'Todo List',
+		description:
+      'A todo list application that allows users to create, edit, and delete tasks, this application was built using React. I created this project to learn React.',
+		image: TodoApp,
+		technologies: [mySkillsData[0].name, mySkillsData[3].name, mySkillsData[12].name],
+		github: 'https://github.com/sergiiop/To-Do-List',
+		live: 'https://sergiiop.github.io/To-Do-List/',
+		genre: 'personal'
+	},
+	{
+		title: 'Portfolio',
+		description: 'This is my portfolio website. It was built using React.',
+		image: Portfolio,
+		technologies: [mySkillsData[0].name, mySkillsData[3].name, mySkillsData[12].name],
+		github: 'https://github.com/sergiiop/my_portfolio',
+		live: 'sergiioperez.com',
+		genre: 'personal'
+	},
+	{
+		title: 'ACI ITALIANA',
+		description:
+      'This is a landing page for a company named ACI ITALIANA that provides advisory services for obtaining Italian citizenship. This project was built using HTML y CSS.',
+		image: ACI,
+		technologies: [mySkillsData[2].name],
+		github: 'https://github.com/juanfug/Aci',
+		live: 'https://acitaliana.com.co/',
+		genre: 'professional'
+	},
+	{
+		title: 'Weather App',
+		description:
+      'this is an app i made to practice reactjs and api consumptions with axios',
+		image: Weather,
+		technologies: [mySkillsData[3].name, mySkillsData[12].name],
+		github: 'https://github.com/sergiiop/WeatherApp',
+		live: 'https://sergiiop.github.io/WeatherApp/',
+		genre: 'personal'
+	},
+	{
+		title: 'KALA BASIC',
+		description:
+      'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
+		image: KalaBasic,
+		technologies: ['WordPress'],
+		github: null,
+		live: 'https://kalabasic.com/',
+		genre: 'professional'
+	}
+]
 
 export const EducationQualityData = [
 	{
