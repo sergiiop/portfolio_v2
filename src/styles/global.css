@@ -158,7 +158,7 @@ menu {
 	gap: 1rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 55em) {
 	.even-columns {
 		grid-auto-flow: column;
 		grid-auto-columns: 1fr;
@@ -295,6 +295,10 @@ menu {
 	display: none;
 }
 
+.vertical-align-center {
+	align-items: center;
+}
+
 .padding-block-800 {
 	padding-block: var(--size-800);
 }
@@ -302,5 +306,21 @@ menu {
 @media (min-width: 40em) {
 	.display-md-inline-flex {
 		display: inline-flex;
+	}
+}
+
+@media (min-width: 55em) {
+	.justify-self-end-md {
+		justify-self: end;
+	}
+}
+
+@media (max-width: 54.9em) {
+	.text-center-md {
+		text-align: center;
+	}
+
+	.justify-self-center-md {
+		justify-self: center;
 	}
 }

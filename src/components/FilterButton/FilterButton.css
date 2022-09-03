@@ -1,6 +1,7 @@
 .button-container {
 	display: flex;
 	gap: 1rem;
+	flex-wrap: wrap;
 }
 
 .button-container > button {

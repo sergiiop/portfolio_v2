@@ -1,15 +1,21 @@
 ---
+import SectionLayout from "../../layouts/SectionLayout.astro";
 import Button from "../Button/Button.astro";
 
 ---
+<SectionLayout>
+  <div class="even-columns vertical-align-center cta-content">
+    <div>
+      <p class="fs-primary-heading fw-bold text-center-md">
+        Escribeme y empezemos a trabajar!
+      </p>
+    </div>
+    <div class="justify-self-end-md justify-self-center-md">
+      <Button title="Contáctame" />
+    </div>
+  </div>
+</SectionLayout>
 
-<div class="even-columns vertical-align-center">
-  <div>
-    <p class="fs-primary-heading fw-bold">
-      Escribeme y empezemos a trabajar!
-    </p>
-  </div>
-  <div class="justify-self-end-md">
-    <Button title="Contáctame" />
-  </div>
-</div>
+<style>
+
+</style>

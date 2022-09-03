@@ -21,7 +21,7 @@ const { education } = Astro.props
 		gap: 1rem;
 	}
 	.education-title--container {
-		padding-left: 6rem;
+		padding-left: 4rem;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -30,11 +30,15 @@ const { education } = Astro.props
 	.education-title--container::before {
 		content: '';
 		position: absolute;
-		width: 1.4rem;
-		height: 1.4rem;
+		width: 1rem;
+		height: 1rem;
+		left: 2.5rem;
 		border-radius: 50%;
-		left: 3.5rem;
 		box-shadow: 0px 0px 20px 6px hsl(var(--clr-secund));
+	}
+
+	.education-content--container p {
+		max-width: 42ch;
 	}
 
 	.education-title--container::after {
@@ -43,14 +47,14 @@ const { education } = Astro.props
 		color: hsl(var(--clr-almost-dark));
 		font-weight: bolder;
 		background: hsl(var(--clr-secund));
-		width: 48px;
 		left: -2px;
-		height: 24px;
 		clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 		display: flex;
 		align-items: center;
 		padding-left: 4px;
-		font-size: 0.85rem;
+		width: 36px;
+			height: 18px;
+			font-size: 0.65rem;
 	}
 
 	.education-content--container > h4 {
@@ -60,15 +64,30 @@ const { education } = Astro.props
 
 	.education-content--container {
 		border-left: 2px solid hsl(var(--clr-secund));
-		margin: 0px 0px 20px 4.2rem;
-		padding-left: 2.5rem;
+		margin-inline-start: 3rem;
+    padding-inline-start: 1rem;
 	}
 
-	@media (max-width: 430px) {
-		.education-title--container::after {
-			width: 36px;
-			height: 18px;
-			font-size: 0.85rem;
-		}
+	@media (min-width: 55em) {
+		.education-content--container {
+		margin-inline-start: 4.2rem;
+    padding-inline-start: 2.5rem;
 	}
+	.education-title--container::after {
+		width: 48px;
+		left: -2px;
+		height: 24px;
+		font-size: 0.85rem;
+	}
+	.education-title--container::before {
+		width: 1.4rem;
+		height: 1.4rem;
+		left: 3.5rem;
+	}
+
+	.education-title--container {
+		padding-left: 6rem;
+	}
+}
+
 </style>

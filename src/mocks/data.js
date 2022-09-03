@@ -93,7 +93,7 @@ export const ProjectsData = [
 	{
 		title: 'Prematix',
 		description:
-      "Prematix was my thesis project, it's a multy-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit, the fathers can see the progress of their babies in the hospital, also it has a video chat feature that allows the doctors to communicate with the parents.",
+      "Prematix was my thesis project, it's a multy-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit, I was in charge of the functionality of the video calls of the application",
 		image: Prematix,
 		technologies: [
 			mySkillsData[0].name,

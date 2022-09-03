@@ -88,13 +88,13 @@ const Projects = () => {
 						<img src={LeftArrow} alt="" />
 					</button>
 				)}
-				<div ref={carousel} className='carousel-track--container' style={{ '--width': `${widthContainer}px` }}>
+				<div ref={carousel} className='carousel-track--container' style={{ '--width': `${widthContainer}%` }}>
 					{filtered.map((project, id) => {
 						return <Project key={id} project={project} setWidthProject={setWidthProject} />
 					})}
 				</div>
 				{
-					(count < limitLeft) && (
+					(count <= limitLeft) && (
 
 						<button className="carousel-button carousel-button--rigth" onClick={() => moveCarousel('rigth')}>
 							<img src={RigthArrow} />
