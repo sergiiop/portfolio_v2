@@ -1,4 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper'
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 import { ProjectsData } from '../../mocks/data.js'
 import { FilterButton } from '../FilterButton/FilterButton.tsx'
 import { Project } from './Project.jsx'
@@ -17,13 +23,16 @@ const Projects = () => {
 	const [projects, setProjects] = useState([])
 	const [filtered, setFiltered] = useState([])
 	const [activeProject, setActiveProject] = useState('all')
-	const [position, setPosition] = useState(0)
-	const [widthProject, setWidthProject] = useState(0)
-	const carousel = useRef(null)
-	const [widthContainer, setWidthContainer] = useState(0)
-	const width = useWindowDimensions()
-	const [limitLeft, setLimitLeft] = useState(0)
-	const [count, setCount] = useState(0)
+	// const [position, setPosition] = useState(0)
+	// const [widthProject, setWidthProject] = useState(0)
+	// const carousel = useRef(null)
+	// const [widthContainer, setWidthContainer] = useState(0)
+	// const width = useWindowDimensions()
+	// const [limitLeft, setLimitLeft] = useState(0)
+	// const [count, setCount] = useState(0)
+
+	const { useIcons } = useAssets()
+	const { LeftArrow, RigthArrow } = useIcons()
 
 	const saveProjects = () => {
 		setProjects(ProjectsData)
@@ -34,39 +43,38 @@ const Projects = () => {
 		saveProjects()
 	}, [])
 
-	useEffect(() => {
-		if (width.width < 680) {
-			setWidthContainer(filtered.length * 100)
-			setLimitLeft(filtered.length - 1)
-		} else if (width.width >= 680 && width.width < 1180) {
-			setWidthContainer(filtered.length * 50)
-			setLimitLeft(filtered.length - 2)
-		} if (width.width >= 1180) {
-			setWidthContainer(filtered.length * 33.3)
-			setLimitLeft(filtered.length - 3)
-		}
-	}, [filtered, width])
+	// useEffect(() => {
+	// 	if (width.width < 680) {
+	// 		setWidthContainer(filtered.length * 100)
+	// 		setLimitLeft(filtered.length - 1)
+	// 	} else if (width.width >= 680 && width.width < 1180) {
+	// 		setWidthContainer(filtered.length * 50)
+	// 		setLimitLeft(filtered.length - 2)
+	// 	} if (width.width >= 1180) {
+	// 		setWidthContainer(filtered.length * 33.3)
+	// 		setLimitLeft(filtered.length - 3)
+	// 	}
+	// }, [filtered, width])
 
-	const { useIcons } = useAssets()
-	const { LeftArrow, RigthArrow } = useIcons()
 
-	useEffect(() => {
-		carousel.current.style.transform = `translateX(${position}px)`
-	}, [position])
 
-	const moveCarousel = (direction) => {
-		// cuando de click en el button se tiene que desplazar el carousel
-		// direccion ?
-		if (direction === 'rigth') {
-			setPosition((prev) => prev - (widthProject + 5))
-			setCount((prev) => prev + 1)
-		}
+	// useEffect(() => {
+	// 	carousel.current.style.transform = `translateX(${position}px)`
+	// }, [position])
 
-		if (direction === 'left') {
-			setPosition((prev) => prev + (widthProject + 5))
-			setCount((prev) => prev - 1)
-		}
-	}
+	// const moveCarousel = (direction) => {
+	// 	// cuando de click en el button se tiene que desplazar el carousel
+	// 	// direccion ?
+	// 	if (direction === 'rigth') {
+	// 		setPosition((prev) => prev - (widthProject + 5))
+	// 		setCount((prev) => prev + 1)
+	// 	}
+
+	// 	if (direction === 'left') {
+	// 		setPosition((prev) => prev + (widthProject + 5))
+	// 		setCount((prev) => prev - 1)
+	// 	}
+	// }
 
 
 	return (
@@ -78,10 +86,10 @@ const Projects = () => {
 				activeItem={activeProject}
 				setActiveItem={setActiveProject}
 				buttonProperties={buttonProperties}
-				handlePosition={setPosition}
-				handleCount={setCount}
+				// handlePosition={setPosition}
+				// handleCount={setCount}
 			/>
-			<div className='projects-carousel'>
+			{/* <div className='projects-carousel'>
 
 				{ position < 0 && (
 					<button className="carousel-button carousel-button--left" onClick={() => moveCarousel('left')}>
@@ -101,7 +109,28 @@ const Projects = () => {
 						</button>
 					)
 				}
-			</div>
+			</div> */}
+			<Swiper
+				slidesPerView={3}
+				spaceBetween={30}
+				slidesPerGroup={3}
+				loop={true}
+				loopFillGroupWithBlank={true}
+				pagination={{
+					clickable: true
+				}}
+				navigation={true}
+				modules={[Pagination, Navigation]}
+				className="mySwiper"
+			>
+				<SwiperSlide>Slide 1</SwiperSlide>
+				<SwiperSlide>Slide 2</SwiperSlide>
+				<SwiperSlide>Slide 3</SwiperSlide>
+				<SwiperSlide>Slide 4</SwiperSlide>
+				<SwiperSlide>Slide 4</SwiperSlide>
+				<SwiperSlide>Slide 4</SwiperSlide>
+				<SwiperSlide>Slide 4</SwiperSlide>
+			</Swiper>
 		</div>
 	)
 }
