@@ -23,7 +23,6 @@ const definedStyles = (technology) => {
 	const isBlack = keysColorsBlack.includes(technology)
 	let color
 	isBlack ? color = 'hsl(var(--clr-almost-dark))' : color = 'hsl(var(--clr-white))'
-	console.log(color)
 	return {
 		background: colorTechnology[technology],
 		color
