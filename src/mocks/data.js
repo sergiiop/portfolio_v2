@@ -1,4 +1,4 @@
-import { useAssets } from '../assets'
+import { useAssets } from '../../public/assets'
 
 const { useIcons, useImages } = useAssets()
 

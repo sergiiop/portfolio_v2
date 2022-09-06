@@ -8,7 +8,7 @@ import 'swiper/css/navigation'
 import { ProjectsData } from '../../mocks/data.js'
 import { FilterButton } from '../FilterButton/FilterButton.tsx'
 import { Project } from './Project.jsx'
-import { useAssets } from '../../assets'
+import { useAssets } from '../../../public/assets'
 
 import './Projects.css'
 

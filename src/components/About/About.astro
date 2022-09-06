@@ -1,7 +1,10 @@
 ---
-import Photo from '../../assets/images/myphoto.jpg'
+import {useAssets} from '../../../public/assets'
 import SectionLayout from '../../layouts/SectionLayout.astro'
 import Title from '../Title/Title.astro'
+
+const {useImages} = useAssets()
+const {MyPhoto} = useImages()
 ---
 
 <SectionLayout backgroundColor={'var(--clr-almost-dark-100)'} id='about'>
@@ -13,6 +16,6 @@ import Title from '../Title/Title.astro'
 			always looking to improve my skills. My current goal is to be part of a good work team that
 			likes challenges and is collaborative to improve each other.
 		</p>
-		<img src={Photo} alt='My image' />
+		<img src={MyPhoto} alt='My image' />
 	</div>
 </SectionLayout>

@@ -29,9 +29,9 @@
 }
 
 .swiper-button-prev::after {
-	background: url('/src/assets/icons/chevron-double-left.svg');
+	background: url('/assets/icons/chevron-double-left.svg');
 }
 
 .swiper-button-next::after {
-	background: url('/src/assets/icons/right-arrow.svg');
+	background: url('/assets/icons/right-arrow.svg');
 }

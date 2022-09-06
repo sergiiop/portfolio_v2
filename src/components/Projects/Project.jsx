@@ -1,6 +1,6 @@
 import React from 'react'
 import './Project.css'
-import { useAssets } from '../../assets'
+import { useAssets } from '../../../public/assets'
 
 const colorTechnology = {
 	ReactJS: '#61DAFB',

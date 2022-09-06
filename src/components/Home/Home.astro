@@ -1,8 +1,11 @@
 ---
-import HeroImage from '../../assets/images/hero.png'
 import Button from '../Button/Button.astro'
-import CV from '../../assets/docs/CV SERGIO PÉREZ.pdf'
+import {useAssets} from '../../../public/assets'
 import SectionLayout from '../../layouts/SectionLayout.astro'
+
+const {useDocs,useImages} = useAssets()
+const {CV} = useDocs()
+const {HeroImage} = useImages()
 ---
 
 <SectionLayout id='#'>
