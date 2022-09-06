@@ -122,7 +122,7 @@ export const ProjectsData = [
 	},
 	{
 		title: 'Portfolio V1',
-		description: 'This is my portfolio website. It was built using React.',
+		description: 'This was the first version of my portfolio that I built, I did it with React for fun',
 		image: Portfolio,
 		technologies: [mySkillsData[3].name, mySkillsData[12].name],
 		github: 'https://github.com/sergiiop/my_portfolio',

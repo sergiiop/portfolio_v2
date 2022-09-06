@@ -18,6 +18,16 @@
 	right: -12px;
 }
 
+@media (min-width: 55em) {
+	.swiper-button-prev {
+		left: -20px;
+	}
+
+	.swiper-button-next {
+		right: -20px;
+	}
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
 	content: '';
