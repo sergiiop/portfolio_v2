@@ -6,6 +6,7 @@ import Prematix from './prematix.png'
 import Weather from './WeatherApp.png'
 import HeroImage from './hero.png'
 import MyPhoto from './myphoto.jpg'
+import PortfolioV2 from './portfolioV2.png'
 
 const useImages = () => {
 	return {
@@ -16,7 +17,8 @@ const useImages = () => {
 		Prematix,
 		Weather,
 		HeroImage,
-		MyPhoto
+		MyPhoto,
+		PortfolioV2
 	}
 }
 

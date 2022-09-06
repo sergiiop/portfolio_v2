@@ -19,7 +19,7 @@ const {
 	Astro
 } = useIcons()
 
-const { TodoApp, Portfolio, ACI, KalaBasic, Prematix, Weather } = useImages()
+const { TodoApp, Portfolio, ACI, KalaBasic, Prematix, Weather, PortfolioV2 } = useImages()
 
 export const mySkillsData = [
 	{
@@ -129,7 +129,6 @@ export const ProjectsData = [
 		image: Portfolio,
 		technologies: [mySkillsData[0].name, mySkillsData[3].name, mySkillsData[12].name],
 		github: 'https://github.com/sergiiop/my_portfolio',
-		live: 'sergiioperez.com',
 		genre: 'personal'
 	},
 	{
@@ -160,6 +159,20 @@ export const ProjectsData = [
 		github: null,
 		live: 'https://kalabasic.com/',
 		genre: 'professional'
+	},
+	{
+		title: 'Portfolio V2',
+		description: 'This is my portfolio website V2. It was built using Astro and a little React.',
+		image: PortfolioV2,
+		technologies: [
+			mySkillsData[0].name,
+			mySkillsData[3].name,
+			mySkillsData[12].name,
+			mySkillsData[13].name
+		],
+		github: 'https://github.com/sergiiop/portfolio_v2',
+		live: '/',
+		genre: 'personal'
 	}
 ]
 

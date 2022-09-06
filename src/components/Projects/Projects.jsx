@@ -22,16 +22,6 @@ const Projects = () => {
 	const [projects, setProjects] = useState([])
 	const [filtered, setFiltered] = useState([])
 	const [activeProject, setActiveProject] = useState('all')
-	// const [position, setPosition] = useState(0)
-	// const [widthProject, setWidthProject] = useState(0)
-	// const carousel = useRef(null)
-	// const [widthContainer, setWidthContainer] = useState(0)
-	// const width = useWindowDimensions()
-	// const [limitLeft, setLimitLeft] = useState(0)
-	// const [count, setCount] = useState(0)
-
-	const { useIcons } = useAssets()
-	const { LeftArrow, RigthArrow } = useIcons()
 
 	const saveProjects = () => {
 		setProjects(ProjectsData)
@@ -41,37 +31,6 @@ const Projects = () => {
 	useEffect(() => {
 		saveProjects()
 	}, [])
-
-	// useEffect(() => {
-	// 	if (width.width < 680) {
-	// 		setWidthContainer(filtered.length * 100)
-	// 		setLimitLeft(filtered.length - 1)
-	// 	} else if (width.width >= 680 && width.width < 1180) {
-	// 		setWidthContainer(filtered.length * 50)
-	// 		setLimitLeft(filtered.length - 2)
-	// 	} if (width.width >= 1180) {
-	// 		setWidthContainer(filtered.length * 33.3)
-	// 		setLimitLeft(filtered.length - 3)
-	// 	}
-	// }, [filtered, width])
-
-	// useEffect(() => {
-	// 	carousel.current.style.transform = `translateX(${position}px)`
-	// }, [position])
-
-	// const moveCarousel = (direction) => {
-	// 	// cuando de click en el button se tiene que desplazar el carousel
-	// 	// direccion ?
-	// 	if (direction === 'rigth') {
-	// 		setPosition((prev) => prev - (widthProject + 5))
-	// 		setCount((prev) => prev + 1)
-	// 	}
-
-	// 	if (direction === 'left') {
-	// 		setPosition((prev) => prev + (widthProject + 5))
-	// 		setCount((prev) => prev - 1)
-	// 	}
-	// }
 
 	return (
 		<div className='projects--section'>
