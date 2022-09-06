@@ -5,19 +5,20 @@ import { Skills } from '../Skills/Skills.jsx'
 import Title from '../Title/Title.astro'
 ---
 
-<SectionLayout>
+<SectionLayout backgroundColor={'var(--clr-almost-dark-100)'} id='resume'>
 	<Title title='My resume' />
 	<div class='even-columns'>
 		<div>
-			<h2>EDUACTION QUALITY</h2>
+			<Title title='education quality' />
 			<Education />
 		</div>
 		<div>
-			<h2>MY SKILLS</h2>
-			<Skills client:visible />
+			<Title title='my skills' />
+			<Skills client:load />
 		</div>
 	</div>
 </SectionLayout>
 
 <style>
+
 </style>

@@ -2,22 +2,20 @@
 import Navbar from '../Navbar/Navbar.astro'
 import Button from '../Button/Button.astro'
 import ButtonNav from './ButtonNav.astro'
-import Logo from '../../assets/images/logo.svg'
+import Logo from '../Logo/Logo.astro'
 ---
 
 <header class='primary-header'>
 	<div class='container'>
 		<div class='nav-wrapper'>
-			<a href="#">
-				<svg class="icon" width="45" height="45">
-					<use xlink:href={`${Logo}#logo`}></use>
-				</svg>
-			</a>
+			<Logo />
 			<ButtonNav />
 			<div class='container-nav flex'>
 				<Navbar />
 			</div>
-			<Button classNames="display-sm-one display-md-inline-flex" title='Contáctame' href='mailto:sergio-luis98@hotmail.com' download='SERGIO_PEREZ_CV' />
+			<div class='button-container display-sm-one display-md-inline-flex'>
+				<Button title='Contáctame' href='mailto:sergio-luis98@hotmail.com' />
+			</div>
 		</div>
 	</div>
 </header>
@@ -25,10 +23,12 @@ import Logo from '../../assets/images/logo.svg'
 <style>
 	.primary-header {
 		margin-top: var(--size-600);
+		position: sticky;
 	}
 	.nav-wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 	}
 </style>

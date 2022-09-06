@@ -4,13 +4,13 @@ const { education } = Astro.props
 
 <section class='education-item--container'>
 	<div year={education.year} class='education-title--container'>
-		<h2>{education.title}</h2>
+		<h2 class='ff-bold fw-black fs-650'>{education.title}</h2>
 	</div>
 	<div class='education-content--container'>
-		<h4 class='fs-300'>
+		<h4 class='ff-bold fw-bold fs-600'>
 			{education.subtitle}
 		</h4>
-		<p>{education.description}</p>
+		<p data-width='wide'>{education.description}</p>
 	</div>
 </section>
 
@@ -37,10 +37,6 @@ const { education } = Astro.props
 		box-shadow: 0px 0px 20px 6px hsl(var(--clr-secund));
 	}
 
-	.education-content--container p {
-		max-width: 42ch;
-	}
-
 	.education-title--container::after {
 		content: attr(year);
 		position: absolute;
@@ -53,8 +49,8 @@ const { education } = Astro.props
 		align-items: center;
 		padding-left: 4px;
 		width: 36px;
-			height: 18px;
-			font-size: 0.65rem;
+		height: 18px;
+		font-size: 0.65rem;
 	}
 
 	.education-content--container > h4 {
@@ -65,29 +61,28 @@ const { education } = Astro.props
 	.education-content--container {
 		border-left: 2px solid hsl(var(--clr-secund));
 		margin-inline-start: 3rem;
-    padding-inline-start: 1rem;
+		padding-inline-start: 1rem;
 	}
 
 	@media (min-width: 55em) {
 		.education-content--container {
-		margin-inline-start: 4.2rem;
-    padding-inline-start: 2.5rem;
-	}
-	.education-title--container::after {
-		width: 48px;
-		left: -2px;
-		height: 24px;
-		font-size: 0.85rem;
-	}
-	.education-title--container::before {
-		width: 1.4rem;
-		height: 1.4rem;
-		left: 3.5rem;
-	}
+			margin-inline-start: 4.2rem;
+			padding-inline-start: 2.5rem;
+		}
+		.education-title--container::after {
+			width: 48px;
+			left: -2px;
+			height: 24px;
+			font-size: 0.85rem;
+		}
+		.education-title--container::before {
+			width: 1.4rem;
+			height: 1.4rem;
+			left: 3.5rem;
+		}
 
-	.education-title--container {
-		padding-left: 6rem;
+		.education-title--container {
+			padding-left: 6rem;
+		}
 	}
-}
-
 </style>

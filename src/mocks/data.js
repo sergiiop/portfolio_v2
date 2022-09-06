@@ -15,7 +15,8 @@ const {
 	React,
 	Redux,
 	Mongo,
-	Vite
+	Vite,
+	Astro
 } = useIcons()
 
 const { TodoApp, Portfolio, ACI, KalaBasic, Prematix, Weather } = useImages()
@@ -86,6 +87,11 @@ export const mySkillsData = [
 		name: 'Vite',
 		pathIcon: Vite,
 		genre: 'others'
+	},
+	{
+		name: 'Astro',
+		pathIcon: Astro,
+		genre: 'frontend'
 	}
 ]
 
@@ -93,7 +99,7 @@ export const ProjectsData = [
 	{
 		title: 'Prematix',
 		description:
-      "Prematix was my thesis project, it's a multy-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit, I was in charge of the functionality of the video calls of the application",
+			"Prematix was my thesis project, it's a multy-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit, I was in charge of the functionality of the video calls of the application",
 		image: Prematix,
 		technologies: [
 			mySkillsData[0].name,
@@ -110,7 +116,7 @@ export const ProjectsData = [
 	{
 		title: 'Todo List',
 		description:
-      'A todo list application that allows users to create, edit, and delete tasks, this application was built using React. I created this project to learn React.',
+			'A todo list application that allows users to create, edit, and delete tasks, this application was built using React. I created this project to learn React.',
 		image: TodoApp,
 		technologies: [mySkillsData[0].name, mySkillsData[3].name, mySkillsData[12].name],
 		github: 'https://github.com/sergiiop/To-Do-List',
@@ -129,7 +135,7 @@ export const ProjectsData = [
 	{
 		title: 'ACI ITALIANA',
 		description:
-      'This is a landing page for a company named ACI ITALIANA that provides advisory services for obtaining Italian citizenship. This project was built using HTML y CSS.',
+			'This is a landing page for a company named ACI ITALIANA that provides advisory services for obtaining Italian citizenship. This project was built using HTML y CSS.',
 		image: ACI,
 		technologies: [mySkillsData[2].name],
 		github: 'https://github.com/juanfug/Aci',
@@ -138,8 +144,7 @@ export const ProjectsData = [
 	},
 	{
 		title: 'Weather App',
-		description:
-      'this is an app i made to practice reactjs and api consumptions with axios',
+		description: 'this is an app i made to practice reactjs and api consumptions with axios',
 		image: Weather,
 		technologies: [mySkillsData[3].name, mySkillsData[12].name],
 		github: 'https://github.com/sergiiop/WeatherApp',
@@ -149,7 +154,7 @@ export const ProjectsData = [
 	{
 		title: 'KALA BASIC',
 		description:
-      'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
+			'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
 		image: KalaBasic,
 		technologies: ['WordPress'],
 		github: null,

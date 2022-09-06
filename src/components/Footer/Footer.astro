@@ -1,0 +1,78 @@
+---
+import Logo from '../Logo/Logo.astro'
+---
+
+<footer class='primary-footer | padding-block-800'>
+	<div class='container'>
+		<div class='primary-footer-wrapper'>
+			<Logo />
+			<ul class='social-list' role='list' aria-label='Social links'>
+				<li>
+					<a
+						aria-label='linkedin'
+						href='https://www.linkedin.com/in/sergiio-perez/'
+						target='_blank'
+					>
+						<svg class='social-icon'>
+							<use xlink:href='src/assets/icons/social-icons.svg#linkedin'></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a aria-label='github' href='https://github.com/sergiiop' target='_blank'>
+						<svg class='social-icon'>
+							<use xlink:href='src/assets/icons/social-icons.svg#github'></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a aria-label='whatsapp' href='https://wa.me/573202647714' target='_blank'>
+						<svg class='social-icon'>
+							<use xlink:href='src/assets/icons/social-icons.svg#whatsapp'></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+			<p class='ff-bold fw-bold fs-650'>Desarrollado con &#128147</p>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.primary-footer {
+		background-color: hsl(var(--clr-almost-dark-100));
+	}
+	.primary-footer-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		align-items: center;
+	}
+	.logo--footer-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+	.social-list {
+		display: flex;
+		gap: var(--size-600);
+		justify-content: center;
+	}
+	.social-icon {
+		width: var(--size-600);
+		aspect-ratio: 1;
+		fill: hsl(var(--clr-secund));
+	}
+
+	.social-list a:is(:hover, :focus) .social-icon {
+		fill: hsl(var(--clr-secund) / 0.5);
+	}
+
+	@media (min-width: 55em) {
+		.primary-footer-wrapper {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+</style>

@@ -1,9 +1,10 @@
 ---
-import SectionLayout from "../../layouts/SectionLayout.astro"
-import {Projects} from '../Projects/Projects';
-
+import SectionLayout from '../../layouts/SectionLayout.astro'
+import { Projects } from '../Projects/Projects'
+import Title from '../Title/Title.astro'
 ---
 
-<SectionLayout>
-  <Projects client:visible />
+<SectionLayout id='projects'>
+	<Title title='projects' />
+	<Projects client:visible />
 </SectionLayout>

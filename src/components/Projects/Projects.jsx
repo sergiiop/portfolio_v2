@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
 // Import Swiper styles
@@ -11,7 +11,6 @@ import { Project } from './Project.jsx'
 import { useAssets } from '../../assets'
 
 import './Projects.css'
-import useWindowDimensions from './../../assets/hooks/useWindowDimensions'
 
 const buttonProperties = [
 	{ name: 'All', genre: 'all' },
@@ -56,8 +55,6 @@ const Projects = () => {
 	// 	}
 	// }, [filtered, width])
 
-
-
 	// useEffect(() => {
 	// 	carousel.current.style.transform = `translateX(${position}px)`
 	// }, [position])
@@ -76,61 +73,50 @@ const Projects = () => {
 	// 	}
 	// }
 
-
 	return (
 		<div className='projects--section'>
-			<h1>Projects</h1>
 			<FilterButton
 				items={projects}
 				setFiltered={setFiltered}
 				activeItem={activeProject}
 				setActiveItem={setActiveProject}
 				buttonProperties={buttonProperties}
-				// handlePosition={setPosition}
-				// handleCount={setCount}
 			/>
-			{/* <div className='projects-carousel'>
-
-				{ position < 0 && (
-					<button className="carousel-button carousel-button--left" onClick={() => moveCarousel('left')}>
-						<img src={LeftArrow} alt="" />
-					</button>
-				)}
-				<div ref={carousel} className='carousel-track--container' style={{ '--width': `${widthContainer}%` }}>
+			<div className='slide-container'>
+				<Swiper
+					slidesPerView={3}
+					spaceBetween={25}
+					loop={true}
+					grabCursor={true}
+					loopFillGroupWithBlank={true}
+					pagination={{
+						clickable: true,
+						dynamicBullets: true
+					}}
+					navigation={true}
+					modules={[Pagination, Navigation]}
+					className='mySwiper slide-content'
+					breakpoints={{
+						0: {
+							slidesPerView: 1
+						},
+						640: {
+							slidesPerView: 2
+						},
+						950: {
+							slidesPerView: 3
+						}
+					}}
+				>
 					{filtered.map((project, id) => {
-						return <Project key={id} project={project} setWidthProject={setWidthProject} />
+						return (
+							<SwiperSlide key={id}>
+								<Project project={project} />
+							</SwiperSlide>
+						)
 					})}
-				</div>
-				{
-					(count <= limitLeft) && (
-
-						<button className="carousel-button carousel-button--rigth" onClick={() => moveCarousel('rigth')}>
-							<img src={RigthArrow} />
-						</button>
-					)
-				}
-			</div> */}
-			<Swiper
-				slidesPerView={3}
-				spaceBetween={30}
-				slidesPerGroup={3}
-				loop={true}
-				loopFillGroupWithBlank={true}
-				pagination={{
-					clickable: true
-				}}
-				navigation={true}
-				modules={[Pagination, Navigation]}
-				className="mySwiper"
-			>
-				<SwiperSlide>Slide 1</SwiperSlide>
-				<SwiperSlide>Slide 2</SwiperSlide>
-				<SwiperSlide>Slide 3</SwiperSlide>
-				<SwiperSlide>Slide 4</SwiperSlide>
-				<SwiperSlide>Slide 4</SwiperSlide>
-				<SwiperSlide>Slide 4</SwiperSlide>
-				<SwiperSlide>Slide 4</SwiperSlide>
-			</Swiper>
+				</Swiper>
+			</div>
 		</div>
 	)
 }

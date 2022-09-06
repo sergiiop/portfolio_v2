@@ -1,6 +1,7 @@
 ---
 const { title, classNames, ...props } = Astro.props
 ---
+
 <a class={`${classNames} button`} {...props}>
 	{title}
 </a>
@@ -11,18 +12,29 @@ const { title, classNames, ...props } = Astro.props
 		text-decoration: none;
 		align-items: center;
 		justify-content: center;
-		justify-self: center;
-		align-self: flex-start;
-		padding: 1em 2em;
+		padding: 1rem 1rem;
 		border-radius: 10px;
 		text-decoration: none;
-		font-weight: var(--fw-bold);
+		font-weight: var(--fw-black);
+		font-family: var(--ff-bold);
 		font-size: var(--fs-button);
 		transition: all 0.2s ease-in;
 		background: transparent;
 		line-height: 1;
 		border: 1px solid hsl(var(--clr-secund));
 		color: hsl(var(--clr-secund));
+		cursor: pointer;
+	}
+
+	.button[data-type='inverted'] {
+		background-color: hsl(var(--clr-almost-dark));
+		border: 1px solid hsl(var(--clr-almost-dark));
+	}
+
+	.button[data-type='inverted']:hover,
+	.button[data-type='inverted']:focus-visible {
+		border: 1px solid hsl(var(--clr-white));
+		background-color: hsl(var(--clr-white));
 	}
 
 	.button:hover {

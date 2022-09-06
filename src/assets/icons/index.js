@@ -12,7 +12,10 @@ import Redux from './redux.svg'
 import Mongo from './mongodb.svg'
 import Vite from './Vite.svg'
 import LeftArrow from './left-arrow.svg'
-import RigthArrow from './right-arrow.svg'
+import Astro from './astro.svg'
+import Logo from './logo.svg'
+import Githubv2 from './githubv2.svg'
+import Live from './site_live.svg'
 
 const useIcons = () => {
 	return {
@@ -30,7 +33,10 @@ const useIcons = () => {
 		Mongo,
 		Vite,
 		LeftArrow,
-		RigthArrow
+		Astro,
+		Logo,
+		Live,
+		Githubv2
 	}
 }
 

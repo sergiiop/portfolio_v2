@@ -4,48 +4,15 @@ import SectionLayout from '../../layouts/SectionLayout.astro'
 import Title from '../Title/Title.astro'
 ---
 
-<SectionLayout isDark={true}>
+<SectionLayout backgroundColor={'var(--clr-almost-dark-100)'} id='about'>
 	<Title title='About me' />
 	<div class='even-columns'>
-		<div class='paragraph-container'>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aliquid officiis vitae
-				voluptate vel reiciendis culpa exercitationem praesentium. Molestias ullam inventore
-				dignissimos vero nemo accusamus rerum eligendi excepturi. Aut, fuga.
-			</p>
-		</div>
+		<p data-width='wide' class='fs-620'>
+			I am a systems engineer passionate about web development and learning, I have good foundations
+			in frontend development as well as backend knowledge, I like to be constantly learning as I am
+			always looking to improve my skills. My current goal is to be part of a good work team that
+			likes challenges and is collaborative to improve each other.
+		</p>
 		<img src={Photo} alt='My image' />
 	</div>
 </SectionLayout>
-<style>
-	.about-container--content {
-		flex-direction: column-reverse;
-		align-items: center;
-		gap: 1.5rem;
-	}
-
-	.paragraph-container {
-		width: 80%;
-		text-align: center;
-	}
-
-	.about-container--content > img {
-		max-width: 400px;
-		max-height: 400px;
-		border-radius: 1rem;
-		object-fit: contain;
-		overflow: hidden;
-	}
-
-	@media (min-width: 45em) {
-		.about-container--content {
-			flex-direction: row;
-			justify-content: space-evenly;
-		}
-
-		.paragraph-container {
-			width: 60%;
-			text-align: start;
-		}
-	}
-</style>

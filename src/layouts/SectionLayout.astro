@@ -1,10 +1,8 @@
 ---
-const { isDark } = Astro.props
-
-const backgroundColor = isDark ? '#171C23' : 'transparent'
+const { backgroundColor, id } = Astro.props
 ---
 
-<section class="padding-block-800">
+<section class='padding-block-800' id={id}>
 	<div class='container'>
 		<slot />
 	</div>
@@ -12,6 +10,6 @@ const backgroundColor = isDark ? '#171C23' : 'transparent'
 
 <style define:vars={{ backgroundColor }}>
 	section {
-		background-color: var(--backgroundColor);
+		background-color: hsl(var(--backgroundColor));
 	}
 </style>

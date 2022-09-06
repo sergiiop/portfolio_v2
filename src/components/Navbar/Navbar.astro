@@ -1,13 +1,13 @@
 <nav class='primary-navigation' id='primary-navigation'>
 	<ul aria-label='Primary' role='list' class='nav-list'>
 		<li>
-			<a href='#about'>About</a>
+			<a href='#about'>About Me</a>
 		</li>
 		<li>
-			<a href='#'>Skills</a>
+			<a href='#projects'>Projects</a>
 		</li>
 		<li>
-			<a href='#'>Projects</a>
+			<a href='#resume'>Resume</a>
 		</li>
 	</ul>
 </nav>
@@ -18,6 +18,7 @@
 		padding: 0;
 		margin: 0;
 		gap: clamp(1rem, 4vw, 3rem);
+		z-index: 100;
 	}
 
 	.nav-list {
@@ -27,14 +28,14 @@
 
 	.nav-list a {
 		text-decoration: none;
-		color: var(--clr-primary-400);
+		color: hsl(var(--clr-white));
 		font-weight: var(--fw-bold);
 		font-size: var(--fs-nav);
 	}
 
 	.nav-list a:hover,
 	.nav-list a:focus {
-		color: var(--clr-accent-400);
+		color: hsl(var(--clr-secund));
 	}
 	@media (max-width: 40em) {
 		.nav-list {
