@@ -1,12 +1,12 @@
 <nav class='primary-navigation' id='primary-navigation'>
 	<ul aria-label='Primary' role='list' class='nav-list'>
-		<li>
+		<li class="navlist-li">
 			<a href='#about'>About Me</a>
 		</li>
-		<li>
+		<li class="navlist-li">
 			<a href='#projects'>Projects</a>
 		</li>
-		<li>
+		<li class="navlist-li">
 			<a href='#resume'>Resume</a>
 		</li>
 	</ul>
@@ -52,7 +52,7 @@
 			flex-direction: column;
 			transform: translateX(100%);
 			transition: transform 500ms ease-in-out;
-			padding: min(20rem, 15vh) 0 0 2rem;
+			padding: min(20rem, 20vh) 0 0 2rem;
 			border-left: 1px solid hsl(var(--clr-secund));
 			background: hsl(var(--clr-almost-dark));
 		}
@@ -74,12 +74,22 @@
 	const navToggle = document.querySelector('.mobile-nav-toggle')
 	const nav = document.querySelector('.primary-navigation')
 	const mediaQuery = window.matchMedia('(max-width: 40rem)')
+	const links = document.querySelectorAll('.navlist-li')
 
 	navToggle.addEventListener('click', () => {
 		nav.hasAttribute('data-visible')
 			? navToggle.setAttribute('aria-expanded', false)
 			: navToggle.setAttribute('aria-expanded', true)
 		nav.toggleAttribute('data-visible')
+	})
+
+	links.forEach((element) => {
+			element.addEventListener('click', () => {
+			nav.hasAttribute('data-visible')
+				? navToggle.setAttribute('aria-expanded', false)
+				: navToggle.setAttribute('aria-expanded', true)
+			nav.toggleAttribute('data-visible')
+		})
 	})
 
 	mediaQuery.addEventListener('change', (e) => {

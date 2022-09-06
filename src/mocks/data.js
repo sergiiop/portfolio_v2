@@ -102,12 +102,9 @@ export const ProjectsData = [
 			"Prematix was my thesis project, it's a multy-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit, I was in charge of the functionality of the video calls of the application",
 		image: Prematix,
 		technologies: [
-			mySkillsData[0].name,
 			mySkillsData[3].name,
-			'React Native',
 			'Firebase',
-			'WebRTC',
-			mySkillsData[10].name
+			'WebRTC'
 		],
 		live: null,
 		github: 'https://github.com/ramiroguzmanc/Prematix-web',
@@ -118,16 +115,16 @@ export const ProjectsData = [
 		description:
 			'A todo list application that allows users to create, edit, and delete tasks, this application was built using React. I created this project to learn React.',
 		image: TodoApp,
-		technologies: [mySkillsData[0].name, mySkillsData[3].name, mySkillsData[12].name],
+		technologies: [mySkillsData[3].name, mySkillsData[12].name],
 		github: 'https://github.com/sergiiop/To-Do-List',
 		live: 'https://sergiiop.github.io/To-Do-List/',
 		genre: 'personal'
 	},
 	{
-		title: 'Portfolio',
+		title: 'Portfolio V1',
 		description: 'This is my portfolio website. It was built using React.',
 		image: Portfolio,
-		technologies: [mySkillsData[0].name, mySkillsData[3].name, mySkillsData[12].name],
+		technologies: [mySkillsData[3].name, mySkillsData[12].name],
 		github: 'https://github.com/sergiiop/my_portfolio',
 		genre: 'personal'
 	},
@@ -165,7 +162,6 @@ export const ProjectsData = [
 		description: 'This is my portfolio website V2. It was built using Astro and a little React.',
 		image: PortfolioV2,
 		technologies: [
-			mySkillsData[0].name,
 			mySkillsData[3].name,
 			mySkillsData[12].name,
 			mySkillsData[13].name

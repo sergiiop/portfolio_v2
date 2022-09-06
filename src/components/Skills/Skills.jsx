@@ -15,8 +15,8 @@ const Skills = () => {
 		{ name: 'All', genre: 'all' },
 		{ name: 'Frontend', genre: 'frontend' },
 		{ name: 'Backend', genre: 'backend' },
-		{ name: 'Data Bases', genre: 'db' },
-		{ name: 'Others', genre: 'others' }
+		{ name: 'DB', genre: 'db' },
+		{ name: 'Tools', genre: 'others' }
 	]
 
 	return (

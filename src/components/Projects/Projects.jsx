@@ -15,7 +15,7 @@ import './Projects.css'
 const buttonProperties = [
 	{ name: 'All', genre: 'all' },
 	{ name: 'Personal Projects', genre: 'personal' },
-	{ name: 'Professional Projects', genre: 'professional' }
+	{ name: 'Prof Projects', genre: 'professional' }
 ]
 
 const Projects = () => {

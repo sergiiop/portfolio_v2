@@ -11,11 +11,11 @@
 }
 
 .swiper-button-prev {
-	left: -25px;
+	left: -12px;
 }
 
 .swiper-button-next {
-	right: -25px;
+	right: -12px;
 }
 
 .swiper-button-prev::after,
