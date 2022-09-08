@@ -57,13 +57,13 @@ const Project = ({ project }) => {
 				<p>{project.description}</p>
 				<div className='sources-container'>
 					{project.github && (
-						<a href='' className='button-src'>
+						<a href={project.github} className='button-src' target='_blank'>
 							<span className='visually-hidden'>Codigo Fuente</span>
 							<img src={Githubv2} alt='' />
 						</a>
 					)}
 					{project.live && (
-						<a href='' className='button-src live'>
+						<a href={project.live} className='button-src live' target='_blank'>
 							<span className='visually-hidden'>Site Live</span>
 							<img src={Live} alt='' />
 						</a>

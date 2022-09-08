@@ -16,7 +16,6 @@
 
 .skill-item-container:hover {
 	background: hsl(var(--clr-secund) / 0.5);
-	color: hsl(var(--clr-almost-dark));
 }
 
 .skill-item-container > img {
