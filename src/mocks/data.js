@@ -19,7 +19,20 @@ const {
 	Astro
 } = useIcons()
 
-const { TodoApp, Portfolio, ACI, KalaBasic, Prematix, Weather, PortfolioV2 } = useImages()
+const {
+	TodoApp,
+	Portfolio,
+	ACI,
+	KalaBasic,
+	Prematix,
+	Weather,
+	PortfolioV2,
+	Batatabit,
+	BlogsPlantilla,
+	Cientifico,
+	GoogleClone,
+	PensionateLanding
+} = useImages()
 
 export const mySkillsData = [
 	{
@@ -97,20 +110,6 @@ export const mySkillsData = [
 
 export const ProjectsData = [
 	{
-		title: 'Prematix',
-		description:
-			"Prematix was my thesis project, it's a multy-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit, I was in charge of the functionality of the video calls of the application",
-		image: Prematix,
-		technologies: [
-			mySkillsData[3].name,
-			'Firebase',
-			'WebRTC'
-		],
-		live: null,
-		github: 'https://github.com/ramiroguzmanc/Prematix-web',
-		genre: 'professional'
-	},
-	{
 		title: 'Todo List',
 		description:
 			'A todo list application that allows users to create, edit, and delete tasks, this application was built using React. I created this project to learn React.',
@@ -122,11 +121,82 @@ export const ProjectsData = [
 	},
 	{
 		title: 'Portfolio V1',
-		description: 'This was the first version of my portfolio that I built, I did it with React for fun',
+		description:
+			'This was the first version of my portfolio that I built, I did it with React for fun',
 		image: Portfolio,
 		technologies: [mySkillsData[3].name, mySkillsData[12].name],
 		github: 'https://github.com/sergiiop/my_portfolio',
 		genre: 'personal'
+	},
+	{
+		title: 'KALA BASIC',
+		description:
+			'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
+		image: KalaBasic,
+		technologies: ['WordPress'],
+		github: null,
+		live: 'https://kalabasic.com/',
+		genre: 'professional'
+	},
+	{
+		title: 'Batatabit',
+		description:
+			'This is a project from the Mobile-First course at Platzi, in which I learned how to make a page mobile-first using HTML and CSS',
+		image: Batatabit,
+		technologies: [mySkillsData[2].name],
+		github: 'https://github.com/sergiiop/Batabit',
+		live: 'https://sergiiop.github.io/Batabit/',
+		genre: 'personal'
+	},
+	{
+		title: '100tifico',
+		description:
+			'This is a project from the SPA with Vanilla JS course where you learned how to create a single page application using only vanillaJS and dom manipulation in platzi',
+		image: Cientifico,
+		technologies: [mySkillsData[0].name],
+		github: 'https://github.com/sergiiop/SPA-100tifico',
+		live: 'https://sergiiop.github.io/SPA-100tifico/',
+		genre: 'personal'
+	},
+	{
+		title: 'Blog template',
+		description:
+			'This is a project of the Definitive Course of HTML and CSS in Platzi, in which I learned html and css a little more deeply',
+		image: BlogsPlantilla,
+		technologies: [mySkillsData[2].name],
+		github: 'https://github.com/sergiiop/My-Blog',
+		live: 'https://sergiiop.github.io/My-Blog/',
+		genre: 'personal'
+	},
+	{
+		title: 'GoogleClone',
+		description:
+			'This project was one of my first approaches to html and css is from the Practical Course of HTML and CSS in Platzi',
+		image: GoogleClone,
+		technologies: [mySkillsData[2].name],
+		github: 'https://github.com/sergiiop/GoogleClone',
+		live: 'https://sergiiop.github.io/GoogleClone/',
+		genre: 'personal'
+	},
+	{
+		title: 'Pensionate Landing',
+		description:
+			'This project was the first landing page I made, I built it using bootstrap and it"s from the Bootstrap Course at Platzi',
+		image: PensionateLanding,
+		technologies: [mySkillsData[2].name, 'Bootstrap'],
+		github: 'https://github.com/sergiiop/Landing',
+		live: 'https://sergiiop.github.io/Landing/',
+		genre: 'personal'
+	},
+	{
+		title: 'Prematix',
+		description:
+			"Prematix was my thesis project, it's a multy-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit, I was in charge of the functionality of the video calls of the application",
+		image: Prematix,
+		technologies: [mySkillsData[3].name, 'Firebase', 'WebRTC'],
+		live: null,
+		github: 'https://github.com/ramiroguzmanc/Prematix-web',
+		genre: 'professional'
 	},
 	{
 		title: 'ACI ITALIANA',
@@ -145,29 +215,6 @@ export const ProjectsData = [
 		technologies: [mySkillsData[3].name, mySkillsData[12].name],
 		github: 'https://github.com/sergiiop/WeatherApp',
 		live: 'https://sergiiop.github.io/WeatherApp/',
-		genre: 'personal'
-	},
-	{
-		title: 'KALA BASIC',
-		description:
-			'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
-		image: KalaBasic,
-		technologies: ['WordPress'],
-		github: null,
-		live: 'https://kalabasic.com/',
-		genre: 'professional'
-	},
-	{
-		title: 'Portfolio V2',
-		description: 'This is my portfolio website V2. It was built using Astro and a little React.',
-		image: PortfolioV2,
-		technologies: [
-			mySkillsData[3].name,
-			mySkillsData[12].name,
-			mySkillsData[13].name
-		],
-		github: 'https://github.com/sergiiop/portfolio_v2',
-		live: '/',
 		genre: 'personal'
 	}
 ]
