@@ -1,10 +1,12 @@
 import React from 'react'
 import './Project.css'
 import { useAssets } from '../../../public/assets'
+import Navigation from './Navigation'
+import Code from './Code'
 
 const colorTechnology = {
 	ReactJS: '#1BCEFF',
-	'HTML y CSS': 'linear-gradient(to right top, #1572b6, #7965bc, #bd4ca1, #e3396b, #e34f26)',
+	'HTML y CSS': '#1572B6',
 	JavaScript: '#FFF539',
 	Nodejs: '#339933',
 	Expressjs: '#000000',
@@ -14,7 +16,8 @@ const colorTechnology = {
 	Git: '#F05032',
 	WebRTC: '#333333',
 	Vite: '#B1B5FB',
-	Astro: '#FF5D01'
+	Astro: '#FF5D01',
+	Bootstrap: '#7952B3'
 }
 
 const keysColorsBlack = ['JavaScript', 'ReactJS', 'Astro', 'React Native', 'Firebase', 'Vite']
@@ -22,13 +25,12 @@ const keysColorsBlack = ['JavaScript', 'ReactJS', 'Astro', 'React Native', 'Fire
 const definedStyles = (technology) => {
 	const isBlack = keysColorsBlack.includes(technology)
 	let color
-	isBlack ? color = 'hsl(var(--clr-almost-dark))' : color = 'hsl(var(--clr-white))'
+	isBlack ? (color = 'hsl(var(--clr-almost-dark))') : (color = 'hsl(var(--clr-white))')
 	return {
 		background: colorTechnology[technology],
 		color
 	}
 }
-
 
 const Project = ({ project }) => {
 	const { useIcons } = useAssets()
@@ -56,16 +58,19 @@ const Project = ({ project }) => {
 				</div>
 				<p>{project.description}</p>
 				<div className='sources-container'>
-					{project.github && (
-						<a href={project.github} className='button-src' target='_blank'>
-							<span className='visually-hidden'>Codigo Fuente</span>
-							<img src={Githubv2} alt='' />
+					{project.live && (
+						<a className='button-src' href={project.live} target='_blank'>
+							<div className='svg-wrapper-1'>
+								<div className='svg-wrapper'>
+									<Navigation />
+								</div>
+							</div>
+							<span>View site</span>
 						</a>
 					)}
-					{project.live && (
-						<a href={project.live} className='button-src live' target='_blank'>
-							<span className='visually-hidden'>Site Live</span>
-							<img src={Live} alt='' />
+					{project.github && (
+						<a className='button-code' href={project.github} target='_blank'>
+							<Code />
 						</a>
 					)}
 				</div>

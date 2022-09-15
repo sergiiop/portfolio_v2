@@ -68,6 +68,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 /* Remove default margin */
@@ -78,9 +79,6 @@
 }
 
 /* Set core root defaults */
-html:focus-within {
-	scroll-behavior: smooth;
-}
 
 /* set up the body */
 body {
@@ -286,6 +284,11 @@ p[data-width='wide'] {
 .fs-650 {
 	font-size: var(--fs-650);
 }
+
+.fs-620 {
+	font-size: var(--fs-620);
+}
+
 .fs-600 {
 	font-size: var(--fs-600);
 }
@@ -344,4 +347,8 @@ p[data-width='wide'] {
 	.justify-self-center-md {
 		justify-self: center;
 	}
+}
+
+#resume {
+	min-height: 110vh;
 }

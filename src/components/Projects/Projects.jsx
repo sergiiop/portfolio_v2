@@ -59,10 +59,10 @@ const Projects = () => {
 						0: {
 							slidesPerView: 1
 						},
-						640: {
+						766: {
 							slidesPerView: 2
 						},
-						950: {
+						1140: {
 							slidesPerView: 3
 						}
 					}}

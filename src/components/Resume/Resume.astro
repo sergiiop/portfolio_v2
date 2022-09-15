@@ -2,23 +2,20 @@
 import SectionLayout from '../../layouts/SectionLayout.astro'
 import Education from '../Education/Education.astro'
 import { Skills } from '../Skills/Skills.jsx'
+import Subtitle from '../Subtitle/Subtitle.astro'
 import Title from '../Title/Title.astro'
 ---
 
 <SectionLayout backgroundColor={'var(--clr-almost-dark-100)'} id='resume'>
 	<Title title='My resume' />
-	<div class='even-columns'>
+	<div class='resume-content even-columns'>
 		<div>
-			<Title title='education quality' />
+			<Subtitle title='education quality' />
 			<Education />
 		</div>
 		<div>
-			<Title title='my skills' />
+			<Subtitle title='my skills' />
 			<Skills client:load />
 		</div>
 	</div>
 </SectionLayout>
-
-<style>
-
-</style>

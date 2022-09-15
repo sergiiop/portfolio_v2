@@ -12,6 +12,8 @@ import BlogsPlantilla from './blogs-plantilla.github.io.png'
 import Cientifico from './cientifico.png'
 import GoogleClone from './google-clone.png'
 import PensionateLanding from './pensionatelanding.github.io.png'
+import WorkShops from './workshops.png'
+import ManageLanding from './managelanding.png'
 
 const useImages = () => {
 	return {
@@ -28,7 +30,9 @@ const useImages = () => {
 		PensionateLanding,
 		GoogleClone,
 		Cientifico,
-		BlogsPlantilla
+		BlogsPlantilla,
+		WorkShops,
+		ManageLanding
 	}
 }
 

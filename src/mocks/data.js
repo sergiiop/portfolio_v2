@@ -31,7 +31,9 @@ const {
 	BlogsPlantilla,
 	Cientifico,
 	GoogleClone,
-	PensionateLanding
+	PensionateLanding,
+	ManageLanding,
+	WorkShops
 } = useImages()
 
 export const mySkillsData = [
@@ -110,6 +112,16 @@ export const mySkillsData = [
 
 export const ProjectsData = [
 	{
+		title: 'WorkShops',
+		description:
+			'In this project are the two workshops worked on in the dom manipulation course, in which I learned how to use the DOM API to read, add, modify, delete nodes, know how Events work in the DOM and use them to make a page interactive',
+		image: WorkShops,
+		technologies: [mySkillsData[0].name],
+		github: 'https://github.com/sergiiop/DOM-Manipulation',
+		live: 'https://sergiiop.github.io/DOM-Manipulation/',
+		genre: 'personal'
+	},
+	{
 		title: 'Todo List',
 		description:
 			'A todo list application that allows users to create, edit, and delete tasks, this application was built using React. I created this project to learn React.',
@@ -126,17 +138,8 @@ export const ProjectsData = [
 		image: Portfolio,
 		technologies: [mySkillsData[3].name, mySkillsData[12].name],
 		github: 'https://github.com/sergiiop/my_portfolio',
+		live: 'https://sergiiop.github.io/my_portfolio_v1/',
 		genre: 'personal'
-	},
-	{
-		title: 'KALA BASIC',
-		description:
-			'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
-		image: KalaBasic,
-		technologies: ['WordPress'],
-		github: null,
-		live: 'https://kalabasic.com/',
-		genre: 'professional'
 	},
 	{
 		title: 'Batatabit',
@@ -146,6 +149,16 @@ export const ProjectsData = [
 		technologies: [mySkillsData[2].name],
 		github: 'https://github.com/sergiiop/Batabit',
 		live: 'https://sergiiop.github.io/Batabit/',
+		genre: 'personal'
+	},
+	{
+		title: 'Manage Landing',
+		description:
+			'This project is the solution to a challenge proposed by the Frontend Mentor Page, in which I improved my html layout skills',
+		image: ManageLanding,
+		technologies: [mySkillsData[2].name, mySkillsData[12].name],
+		github: 'https://github.com/sergiiop/manage-landing-page',
+		live: 'https://sergiiop.github.io/manage-landing-page/',
 		genre: 'personal'
 	},
 	{
@@ -216,6 +229,25 @@ export const ProjectsData = [
 		github: 'https://github.com/sergiiop/WeatherApp',
 		live: 'https://sergiiop.github.io/WeatherApp/',
 		genre: 'personal'
+	},
+	{
+		title: 'KALA BASIC',
+		description:
+			'This is a eccomerce website for a company named KALA BASIC located in Montería, Colombia that sells basic and printed t-shirts. This project was built using WordPress.',
+		image: KalaBasic,
+		technologies: ['WordPress'],
+		github: null,
+		live: 'https://kalabasic.com/',
+		genre: 'professional'
+	},
+	{
+		title: 'Portfolio V2',
+		description: 'This is my portfolio website V2. It was built using Astro and a little React.',
+		image: PortfolioV2,
+		technologies: [mySkillsData[3].name, mySkillsData[12].name, mySkillsData[13].name],
+		github: 'https://github.com/sergiiop/portfolio_v2',
+		live: '/',
+		genre: 'personal'
 	}
 ]
 
@@ -225,21 +257,24 @@ export const EducationQualityData = [
 		subtitle: 'Universidad del Sinú',
 		description:
 			'I completed my studies in Information Systems Engineer at the Universidad del Sinú in Montería, Colombia. I was part of the team that developed the a multi-platform application that allows fathers to monitorize their premature babies while they are in the intensive care unit.',
-		year: '2022'
+		year: '2022',
+		credential: 'https://drive.google.com/file/d/1lrni-LeldWc-PJZIfVSj8okYMxPMbsMR/view?usp=sharing'
 	},
 	{
 		title: 'Mísion TIC 2022',
 		subtitle: 'Universidad Pontificia Bolivariana',
 		description:
-			'I participated in the programa Mision TIC 2022 that was created by the ministry of technology of the Colombia. This program was created to train 100000 young people in 3 years. The enphasis was learning programming and aplications web with a intensity of 800 hours',
-		year: '2021'
+			'The program is made up of a basic training cycle (basic programming, fundamentals of programming and software development of 600 hours) and a deepening cycle (web application development). In this program I lead a work team of 5 people in which we carry out a consultancy application',
+		year: '2021',
+		credential: 'https://drive.google.com/file/d/13Ldix3C6djb2E2QGPlqA2QeBqPbhilDG/view?usp=sharing'
 	},
 	{
-		title: 'JavaScript School',
+		title: 'Full Stack Developer career with JavaScript',
 		subtitle: 'Platzi',
 		description:
-			'I learned JavaScript from Platzi. I learned how to use the JavaScript language and how to use the JavaScript framework ReactJS, finally I finished the career of javascript developer in agoust 2020.',
-		year: '2020'
+			'In this career I learned to use the MERN and PERN stack, Add interactivity and DOM manipulation to applications with JavaScript and React.js. Work with JavaScript on the backend using Node.js, Express.js, and PostgreSQL. Finally add authentication flows using Passport.js and JSON Web Tokens.',
+		year: '2020',
+		credential: 'https://platzi.com/p/sergiiolperez/ruta/100-escuela-javascript/diploma/detalle/'
 	}
 ]
 
